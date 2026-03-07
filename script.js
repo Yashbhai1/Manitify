@@ -5,6 +5,7 @@ menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
+//  files downloaded counter //
 let counter = 0;
 const counterElement = document.getElementById("downloadCounter");
 
