@@ -1,0 +1,469 @@
+:root {
+  --nav1: #0d2344;
+  --nav2: #0c2957;
+  --blue: #2f86ff;
+  --purple: #6f4dff;
+  --green: #13a55f;
+  --text: #18315d;
+  --muted: #6f7d98;
+  --line: #dce3ef;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --shadow: 0 10px 30px rgba(18, 44, 89, 0.08);
+  --radius: 20px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+/* NAV */
+.navbar {
+  background: linear-gradient(90deg, var(--nav1), var(--nav2));
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 250px;
+}
+.brand img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #fff;
+  padding: 2px;
+}
+.brand h3 {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.brand p {
+  font-size: 11px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+.nav-links {
+  display: flex;
+  gap: 38px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.95;
+  padding: 28px 0;
+  position: relative;
+}
+.nav-links a.active {
+  color: #4da0ff;
+}
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2d9cff, #6f4dff);
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.search-btn,
+.menu-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.join-btn {
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5f6cff, #7b4dff);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+}
+.menu-btn {
+  display: none;
+}
+
+/* HERO */
+.hero {
+  background: #fff;
+  padding: 34px 0 28px;
+  border-bottom: 1px solid #edf1f7;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 31px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+  color: #173563;
+}
+.hero p {
+  font-size: 15px;
+  color: #66748f;
+  margin-bottom: 18px;
+}
+.hero-line {
+  width: 115px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2d9cff, #b05cff);
+  margin: auto;
+}
+
+/* FILTER BAR */
+.toolbar {
+  background: #fff;
+  border-bottom: 1px solid #edf1f7;
+}
+.toolbar-wrap {
+  padding: 20px 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.search-box {
+  flex: 1 1 360px;
+  max-width: 370px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid #d8deea;
+  border-radius: 999px;
+  padding: 15px 18px;
+  background: #fff;
+  color: #8a97ad;
+}
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  color: #334b74;
+  background: transparent;
+}
+.filters {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  flex: 1 1 650px;
+  justify-content: flex-start;
+}
+.pill {
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 2px solid #d7dff0;
+  background: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #28446f;
+  cursor: pointer;
+}
+.pill.all {
+  background: linear-gradient(90deg, #2d9cff, #7b4dff);
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 22px rgba(85, 104, 255, 0.22);
+}
+.pill.technical {
+  border-color: #8b9dff;
+  color: #5262d8;
+}
+.pill.cultural {
+  border-color: #cf91ff;
+  color: #a84cf1;
+}
+.pill.sports {
+  border-color: #68c69c;
+  color: #0c8751;
+}
+.pill.social {
+  border-color: #bb92ff;
+  color: #8d55dd;
+}
+
+/* TOP INFO */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0 12px;
+}
+.top-row p {
+  font-size: 15px;
+  color: #596985;
+}
+.sort-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #5d6f8d;
+}
+.sort-select {
+  min-width: 118px;
+  border: 2px solid #b8c7ea;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: #fff;
+  color: #50668f;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CARDS */
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-bottom: 32px;
+}
+.club-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: 0.28s ease;
+  border: 1px solid #eef2f8;
+}
+.club-card:hover {
+  transform: translateY(-6px);
+}
+.card-image {
+  height: 118px;
+  position: relative;
+  overflow: hidden;
+}
+.card-image img {
+  height: 100%;
+}
+.tag {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+}
+.tag.technical {
+  background: #2f86ff;
+}
+.tag.cultural {
+  background: #a34df4;
+}
+.tag.sports {
+  background: #16aa5f;
+}
+.tag.social {
+  background: #2db566;
+}
+.icon-badge {
+  position: absolute;
+  left: 18px;
+  bottom: -34px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px rgba(23, 49, 93, 0.16);
+  font-size: 34px;
+}
+.icon-badge.blue {
+  color: #2f86ff;
+}
+.icon-badge.purple {
+  color: #7a4fff;
+}
+.icon-badge.green {
+  color: #15985c;
+}
+.icon-badge.darkgreen {
+  color: #15784f;
+}
+.club-body {
+  padding: 28px 18px 18px;
+}
+.club-body h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1b315a;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.club-body p {
+  font-size: 14px;
+  color: #6a7892;
+  line-height: 1.65;
+  min-height: 68px;
+}
+.club-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 14px;
+}
+.club-link.blue {
+  color: #2f86ff;
+}
+.club-link.purple {
+  color: #7a4fff;
+}
+.club-link.green {
+  color: #16aa5f;
+}
+
+.info-note {
+  margin: 6px auto 42px;
+  background: #edf4ff;
+  border: 1px solid #dbe7ff;
+  color: #566b8e;
+  padding: 18px 22px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 760px;
+  font-size: 15px;
+}
+.info-note i {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  color: #f2b43a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 1100px) {
+  .clubs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .menu-btn {
+    display: grid;
+    place-items: center;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 78px;
+    background: linear-gradient(180deg, var(--nav1), #0d2850);
+    padding: 20px;
+    flex-direction: column;
+    gap: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-actions .search-btn,
+  .nav-actions .join-btn {
+    display: none;
+  }
+  .clubs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filters {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 26px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+  .brand {
+    min-width: auto;
+  }
+  .brand h3 {
+    font-size: 13px;
+  }
+  .brand p {
+    font-size: 10px;
+  }
+  .top-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .toolbar-wrap {
+    padding: 16px 0;
+  }
+  .search-box {
+    max-width: 100%;
+  }
+  .clubs-grid {
+    grid-template-columns: 1fr;
+  }
+  .club-body p {
+    min-height: auto;
+  }
+  .info-note {
+    font-size: 14px;
+    padding: 16px;
+  }
+}

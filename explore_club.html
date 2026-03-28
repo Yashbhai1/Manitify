@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANIT Clubs & Societies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="explore_club_style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <img src="Manit Logo - Copy.jpg" alt="MANIT Logo">
+        <div>
+          <h3>MANIT BHOPAL</h3>
+          <p>Student Clubs &amp; Societies</p>
+        </div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <!-- <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li> -->
+        <li><a class="active" href="#">Clubs</a></li>
+        <!-- <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li> -->
+      </ul>
+      <!-- <div class="nav-actions">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="#" class="join-btn">Join a Club</a>
+        <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+      </div> -->
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Explore Clubs &amp; Societies</h1>
+      <p>Discover diverse communities, pursue your passions and grow beyond academics.</p>
+      <div class="hero-line"></div>
+    </div>
+  </section>
+
+  <section class="toolbar">
+    <div class="container toolbar-wrap">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search clubs...">
+      </div>
+      <div class="filters">
+        <button class="pill all"><i class="fa-solid fa-table-cells-large"></i> All Clubs</button>
+        <button class="pill technical"><i class="fa-solid fa-gears"></i> Technical</button>
+        <button class="pill cultural"><i class="fa-solid fa-masks-theater"></i> Cultural</button>
+        <button class="pill sports"><i class="fa-solid fa-trophy"></i> Sports</button>
+        <button class="pill social"><i class="fa-solid fa-hands-holding-circle"></i> Social</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="top-row">
+      <p>Showing 12 Clubs &amp; Societies</p>
+      <div class="sort-box">Sort by:
+        <div class="sort-select">A - Z <i class="fa-solid fa-angle-down"></i></div>
+      </div>
+    </div>
+
+    <section class="clubs-grid">
+      <article class="club-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="SAE Club">
+          <span class="tag technical">Technical</span>
+          <div class="icon-badge blue"><i class="fa-solid fa-car-side"></i></div>
+        </div>
+        <div class="club-body">
+          <h3>SAE Club</h3>
+          <p>Automotive engineering, design &amp; racing competitions</p>
+          <a href="#" class="club-link blue">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="club-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?q=80&w=1200&auto=format&fit=crop" alt="Robotics Club">
+          <span class="tag technical">Technical</span>
+          <div class="icon-badge purple"><i class="fa-solid fa-robot"></i></div>
+        </div>
+        <div class="club-body">
+          <h3>Robotics Club</h3>
+          <p>Robotics, automation &amp; intelligent systems</p>
+          <a href="#" class="club-link blue">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="club-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="ISTE">
+          <span class="tag technical">Technical</span>
+          <div class="icon-badge blue"><i class="fa-solid fa-microchip"></i></div>
+        </div>
+        <div class="club-body">
+          <h3>ISTE Students’ Chapter</h3>
+          <p>Technical learning, workshops &amp; industry interactions</p>
+          <a href="#" class="club-link blue">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="club-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop" alt="E-Cell">
+          <span class="tag technical">Technical</span>
+          <div class="icon-badge darkgreen"><i class="fa-solid fa-lightbulb"></i></div>
+        </div>
+        <div class="club-body">
+          <h3>E-Cell (Entrepreneurship)</h3>
+          <p>Promoting innovation &amp; startup culture</p>
+          <a href="#" class="club-link blue">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="club-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop" alt="NSS">
+          <span class="tag social">Social</span>
+          <div class="icon-badge blue"><i class="fa-solid fa-handshake-angle"></i></div>
+        </div>
+        <div class="club-body">
+          <h3>NSS</h3>
+          <p>Social service, community outreach &amp; development</p>
+          <a href="#" class="club-link green">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="club-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop" alt="Music Club">
+          <span class="tag cultural">Cultural</span>
+          <div class="icon-badge purple"><i class="fa-solid fa-music"></i></div>
+        </div>
+        <div class="club-body">
+          <h3>Music Club</h3>
+          <p>Music, singing &amp; instrumental performances</p>
+          <a href="#" class="club-link purple">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="club-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=1200&auto=format&fit=crop" alt="Dramatics Club">
+          <span class="tag cultural">Cultural</span>
+          <div class="icon-badge purple"><i class="fa-solid fa-masks-theater"></i></div>
+        </div>
+        <div class="club-body">
+          <h3>Dramatics Club</h3>
+          <p>Theatre, acting &amp; stage performances</p>
+          <a href="#" class="club-link purple">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="club-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="Sports Club">
+          <span class="tag sports">Sports</span>
+          <div class="icon-badge green"><i class="fa-solid fa-trophy"></i></div>
+        </div>
+        <div class="club-body">
+          <h3>Sports Club</h3>
+          <p>Sports events, training &amp; competitive spirit</p>
+          <a href="#" class="club-link green">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </section>
+
+    <div class="info-note">
+      <i class="fa-regular fa-lightbulb"></i>
+      <span>Click on any club card to know more about activities, achievements and recruitment process.</span>
+    </div>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
+  </script>
+</body>
+</html>
