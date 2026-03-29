@@ -1,5 +1,6 @@
-const menuBtn = document.getElementById("menuBtn");
-      const navLinks = document.getElementById("navLinks");
-      menuBtn.addEventListener("click", () =>
-        navLinks.classList.toggle("show"),
-      );
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
