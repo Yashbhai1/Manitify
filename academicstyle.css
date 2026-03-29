@@ -148,7 +148,11 @@ font-size:16px;
 font-size:13px;
 color:#9fb2d4;
 }
-
+/* subject */
+.subject-link {
+  text-decoration: none;
+  color: inherit;
+}
 /* RESPONSIVE */
 
 @media(max-width:768px){

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANITify - Subject Resources</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="subjectstyle.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="logo-section">
+      <!-- Replace # with your real homepage link -->
+      <a href="#" class="brand">
+        <img src="https://i.ibb.co/gLqt47Q0/1.png" alt="MANITify Logo">
+        <div class="brand-text">
+          <h2>MANIT<span>ify</span></h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Syllabus</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="icon-btn" onclick="toggleMode()" title="Toggle Theme">
+        <i class="fa-solid fa-sun" id="themeIcon"></i>
+      </button>
+
+      <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png" class="avatar" alt="User">
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN SECTION ================= -->
+  <section class="subject-page">
+    <div class="subject-container">
+
+      <div class="subject-top">
+        <div>
+          <h1 id="subjectTitle">Mathematics 1</h1>
+          <p class="sub-line">Access organized academic resources for your selected subject</p>
+        </div>
+
+        <div class="resource-filter">
+          <select id="resourceFilter">
+            <option value="all">All Resources</option>
+            <option value="assignments">Assignments</option>
+            <option value="notes">Notes</option>
+            <option value="books">Books</option>
+            <option value="pyqs">PYQs</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- CATEGORY CARDS -->
+      <div class="category-grid" id="categoryGrid">
+
+        <!-- Assignment -->
+        <div class="resource-card" data-type="assignments">
+          <div class="resource-icon assignment">
+            <i class="fa-solid fa-file-pen"></i>
+          </div>
+          <div class="resource-content">
+            <h3>Assignments</h3>
+            <p>Section-wise assignment PDFs for practice and submission.</p>
+            <button class="open-btn" onclick="openModal('assignments')">Open</button>
+          </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="resource-card" data-type="notes">
+          <div class="resource-icon notes">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <div class="resource-content">
+            <h3>Notes</h3>
+            <p>Lecture notes, handwritten material and class summaries.</p>
+            <button class="open-btn" onclick="openModal('notes')">Open</button>
+          </div>
+        </div>
+
+        <!-- Books -->
+        <div class="resource-card" data-type="books">
+          <div class="resource-icon books">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <div class="resource-content">
+            <h3>Books</h3>
+            <p>Recommended textbooks and reference books in PDF format.</p>
+            <button class="open-btn" onclick="openModal('books')">Open</button>
+          </div>
+        </div>
+
+        <!-- PYQs -->
+        <div class="resource-card" data-type="pyqs">
+          <div class="resource-icon pyqs">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <div class="resource-content">
+            <h3>PYQs</h3>
+            <p>Previous year question papers for exam preparation.</p>
+            <button class="open-btn" onclick="openModal('pyqs')">Open</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MODAL ================= -->
+  <div class="modal-overlay" id="pdfModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 id="modalTitle">Resources</h2>
+        <button class="close-modal" onclick="closeModal()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="pdf-list" id="pdfList">
+        <!-- PDFs JS se aayenge -->
+      </div>
+    </div>
+  </div>
+
+  <script src="subjectscript.js"></script>
+</body>
+</html>
