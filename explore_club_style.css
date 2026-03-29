@@ -160,7 +160,7 @@ a {
   background: #fff;
   border-bottom: 1px solid #edf1f7;
   height: 90px;
-  width: vw;
+  width: 100%;
 }
 .toolbar-wrap {
   padding: 15px 0;
@@ -240,7 +240,97 @@ a {
   border-color: rgb(2, 72, 30);
   color: rgb(2, 125, 51);
 }
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+  .toolbar {
+    padding: 18px 0;
+  }
 
+  .toolbar-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .search-box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .filters {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .toolbar {
+    padding: 18px 0;
+  }
+
+  .toolbar-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 10px 0;
+  }
+
+  .search-box {
+    max-width: 100%;
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 14px 16px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+  }
+
+  .filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .pill {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .toolbar {
+    padding: 16px 0;
+  }
+
+  .search-box {
+    padding: 13px 15px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+  }
+
+  .filters {
+    gap: 8px;
+  }
+
+  .pill {
+    font-size: 13px;
+    padding: 9px 12px;
+    gap: 8px;
+  }
+}
 /* TOP INFO */
 .top-row {
   display: flex;
